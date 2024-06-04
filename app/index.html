@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rombusz</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">        
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rombusz kerület terület</h1>
+      <div class="form">
+        <div class="input">
+          <label for="side" class="form-label">Oldal</label>
+          <input type="text" class="form-control" id="side" required>
+        </div>
+        <div class="input">
+          <label for="alpha" class="form-label">Szög</label>
+          <input type="text" class="form-control" id="alpha" required>
+        </div>
+        <div>
+          <button id="calcButton" class="btn btn-secondary mt-2">Számít</button>
+        </div>
+        <div class="input">
+          <label for="perimeter" class="form-label">Kerület</label>
+          <input type="text" class="form-control" id="perimeter" readonly>
+        </div>
+        <div class="input">
+          <label for="area" class="form-label">Terület</label>
+          <input type="text" class="form-control" id="area" readonly>
+        </div>
+      </div>
+      <div class="about">
+        Ritzl Bence, I1N, 2024-05-23
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+
