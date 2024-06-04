@@ -40,10 +40,12 @@ describe('Rombusz kerület számító program tesztelése', function() {
         const actual = await page.title();
         const excepted = 'Rombusz';
         assert.strictEqual(actual, excepted);
-    })
+    });
 
     it('Az oldal címe', async function () {
         await page.goto('http://localhost:3000');
-        page.$eval('h1')
-    })
+        const actual = await page.$eval('h1', element => element.textContent);
+        const excepted = 'Rombusz kerület terület';
+        assert.strictEqual(actual,excepted);
+    });
 });
