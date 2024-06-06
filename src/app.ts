@@ -1,3 +1,5 @@
+import { calcPerimeter, calcArea } from "./rombusz.js";
+
 class Romb {
     //kötések (bind)
     sideInput?: HTMLInputElement | null;
@@ -31,23 +33,10 @@ class Romb {
         
         const side = Number(this.sideInput?.value);
         const alpha = Number(this.alphaInput?.value);
-        const perimeter = this.calcPerimeter(side);
-        const area = this.calcArea(side, alpha);
+        const perimeter = calcPerimeter(side);
+        const area = calcArea(side, alpha);
         this.renderResult(perimeter, area);
-
-        
-
     }
-
-    calcPerimeter(side: number): number {
-        return side * 4;
-    }
-
-    calcArea(side: number, alpha: number): number {
-        const rad = alpha * Math.PI / 180;
-        return Math.pow(side, 2) * Math.sin(rad);
-    }
-
     renderResult(perimeter: number, area: number) {
         if (this.perimeterInput) {
         this.perimeterInput.value = String(perimeter)
@@ -55,8 +44,6 @@ class Romb {
         if (this.areaInput) {
         this.areaInput.value = String(area)
         }
-
-        
     }
 }
 new Romb();
